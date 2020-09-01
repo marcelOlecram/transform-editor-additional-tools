@@ -5,10 +5,11 @@ Tools for unity editor, to expand functionality.
 ## About
 The custom transfor inspector idea came from this [tutorial](http://naplandgames.com/blog/2016/08/27/unity-3d-tutorial-custom-transform-inspector/).
 
-The custom input manager come from the necessity to add easily new joysticks or any input element the fastest way possible
-The purpose of this repository is to expand functionality.
+The purpose of this repository is to expand functionality to the default transform inspector component.
 
-The project uses a [MIT License](https://github.com/marcelOlecram/unity-custom-transform/blob/master/LICENSE). Use it as you want it
+Developed under _Unity 2019.4.8f1_
+
+The project uses a MIT License. Use it as you want it
 
 The basic Transform inspector in Unity only provides Position, Rotation and Scale information. This custom transform inspector, expand from this, adding:
 
@@ -21,6 +22,10 @@ The basic Transform inspector in Unity only provides Position, Rotation and Scal
     - Random position (between a range designated from two Vector3), with an Axis constraint
     - Random rotation (calculated in EulerAngles from 0 to 360 degress), with Axis contraint
     - Random scale (calculated between two floats, this random scale is applied to all xis). Keeping uniformity
+
+## Installation
+
+On your Unity Project > Window > Package Manager > Plus sign > Add Package from git URL > _paste this repo URL_
 
 ###  Custom Transform Inspector
 
