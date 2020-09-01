@@ -27,11 +27,6 @@ The basic Transform inspector in Unity only provides Position, Rotation and Scal
 
 On your Unity Project > Window > Package Manager > Plus sign > Add Package from git URL > _paste this repo URL_
 
-###  Custom Transform Inspector
-
-Provides a new Window in unity under "Window tab" to easily add new Input elements to Unity InputManager
-
-## todo repository in general
-- show images maybe gifs explaining functions
+## Ideas / TODOs in a future
+- make repo more presentable
 - subdivide in more tools
-- tool to add Joystick to Input Manager
