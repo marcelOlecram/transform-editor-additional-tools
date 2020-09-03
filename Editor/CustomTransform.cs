@@ -12,6 +12,7 @@ namespace Arcmoel.Tools
         // Store selected transform;
         private Transform _transform;
         // Foldouts
+        private static bool additionalToolsFoldout = false;
         private static bool quaternionFoldout = false;  
         private static bool positionFoldout = false;
         private static bool rotationFoldout = false;
@@ -31,14 +32,18 @@ namespace Arcmoel.Tools
         public override void OnInspectorGUI()
         {
             _transform = (Transform)target;
-            RealWorldPosition();
-            EditorGUILayout.Space();
             StandardTransformInspector();
-            ResetTransformDataInspector();
-            QuaternionInspector();
-            PositionInspector();
-            RotationInspector();
-            ScaleInpector();
+            EditorGUILayout.Space();
+            additionalToolsFoldout = EditorGUILayout.Foldout(additionalToolsFoldout, "Additional Tools");
+            if (additionalToolsFoldout)
+            {
+                ResetTransformDataInspector();
+                RealWorldPosition();
+                PositionInspector();
+                QuaternionInspector();
+                RotationInspector();
+                ScaleInpector();
+            }
             //base.OnInspectorGUI();
         }
         #endregion
@@ -65,10 +70,10 @@ namespace Arcmoel.Tools
             if (selectedTransforms.Length >= 1)
             {
                 foreach (var item in selectedTransforms)
-                {
+                {                    
                     if (resetPos)
                     {
-                        Debug.Log("Resetting position");
+                        Debug.Log("Resetting position");                        
                         item.localPosition = Vector3.zero;
                         continue;
                     }
@@ -137,7 +142,7 @@ namespace Arcmoel.Tools
                 didPositionChange = true;
 
             EditorGUI.BeginChangeCheck();
-            Vector3 localEulerAngles = EditorGUILayout.Vector3Field("Euler Rotation", _transform.localEulerAngles);
+            Vector3 localEulerAngles = EditorGUILayout.Vector3Field("Rotation", _transform.localEulerAngles);
             if (EditorGUI.EndChangeCheck())
                 didRotationChange = true;
 

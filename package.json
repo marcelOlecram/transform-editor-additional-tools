@@ -1,6 +1,6 @@
 {
     "name": "com.arcmoel.transform-editor-tools",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "displayName": "Transform Editor Tools Inspector",
     "description": "Custom Inspector for Unity's transform components to add functionality",
     "license": "MIT",
